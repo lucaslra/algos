@@ -6,6 +6,13 @@ type Celsius float64
 type Fahrenheit float64
 type Kelvin float64
 
+func init() {
+	fmt.Println("PACKAGE STARTED 1", AbsoluteZeroC)
+}
+func init() {
+	fmt.Println("PACKAGE STARTED 2")
+}
+
 const (
 	AbsoluteZeroC Celsius = -273.15
 	FreezingC     Celsius = 0
