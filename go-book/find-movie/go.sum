@@ -1,0 +1,3 @@
+github.com/cosiner/argv v0.0.1/go.mod h1:p/NrK5tF6ICIly4qwEDsf6VDirFiWWz0FenfYBwJaKQ=
+github.com/cosiner/flag v0.5.2 h1:dcI3ExLwrYt/wgg1RXZBn7FFFn3Mi5Lyremoa7Tt5ts=
+github.com/cosiner/flag v0.5.2/go.mod h1:+zDQNSDNnkR7CGUlSrw2d/5S26bL91amx0FVUbnmLrU=
