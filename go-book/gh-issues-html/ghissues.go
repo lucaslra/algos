@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"html/template"
+	"io"
 	"log"
 	"net/http"
 	"net/url"
@@ -64,7 +65,12 @@ func searchIssues(terms []string) (*IssuesSearchResult, error) {
 	if err != nil {
 		return nil, err
 	}
-	defer resp.Body.Close()
+	defer func(Body io.ReadCloser) {
+		err := Body.Close()
+		if err != nil {
+			panic(err)
+		}
+	}(resp.Body)
 
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("search query failed: %s", resp.Status)
@@ -87,8 +93,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	// fmt.Printf("%d issues:\n", result.TotalCount)
 
 	if err := report.Execute(os.Stdout, result); err != nil {
 		log.Fatal(err)

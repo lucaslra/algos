@@ -11,9 +11,9 @@ import (
 )
 
 func main() {
-	cmd := parseArgs()
+	rootCmd := parseArgs()
 
-	foundMovies := movies.ListMovies(cmd.Terms...)
+	foundMovies := movies.ListMovies(rootCmd.Terms...)
 
 	for i, movie := range foundMovies {
 		fmt.Printf("%d\t%s\n", i, movie.Title)
@@ -21,18 +21,21 @@ func main() {
 }
 
 func parseArgs() cmd.PosterCmd {
-	var cmd cmd.PosterCmd
+	var posterCmd cmd.PosterCmd
 
 	set := flag.NewFlagSet(flag.Flag{})
-	err := set.ParseStruct(&cmd)
+	err := set.ParseStruct(&posterCmd)
 	if err != nil {
 		log.Fatal(err)
 	}
-	if len(cmd.Terms) < 1 {
-		fmt.Fprint(os.Stderr, "Invalid usage! Inform the search terms\n")
+	if len(posterCmd.Terms) < 1 {
+		_, err = fmt.Fprint(os.Stderr, "Invalid usage! Inform the search terms\n")
+		if err != nil {
+			panic(err)
+		}
 		set.Help()
 
 		os.Exit(1)
 	}
-	return cmd
+	return posterCmd
 }

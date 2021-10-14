@@ -41,7 +41,10 @@ func main() {
 		fmt.Println("Visiting", r.URL)
 	})
 
-	collector.Visit("https://www.factretriever.com/rhino-facts")
+	err := collector.Visit("https://www.factretriever.com/rhino-facts")
+	if err != nil {
+		panic(err)
+	}
 
 	writeFacts(allFacts)
 }

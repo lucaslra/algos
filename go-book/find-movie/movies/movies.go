@@ -3,6 +3,7 @@ package movies
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -58,7 +59,12 @@ func getMovies(url string, page int) ([]*Movie, error) {
 	if err != nil {
 		log.Fatalf("Failed to query list of movies: %q", err.Error())
 	}
-	defer resp.Body.Close()
+	defer func(Body io.ReadCloser) {
+		err := Body.Close()
+		if err != nil {
+			panic(err)
+		}
+	}(resp.Body)
 
 	var moviesSearch MovieSearchResult
 	if err := json.NewDecoder(resp.Body).Decode(&moviesSearch); err != nil {

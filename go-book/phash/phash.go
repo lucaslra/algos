@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-var hash *int = flag.Int("f", 256, "Valid Values: 256, 384, 512")
+var hash = flag.Int("f", 256, "Valid Values: 256, 384, 512")
 
 func main() {
 	flag.Parse()

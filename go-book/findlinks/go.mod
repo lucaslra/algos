@@ -1,4 +1,4 @@
-module github.com/lucaslra/go-algos
+module github.com/lucaslra/findlinks
 
 go 1.17
 

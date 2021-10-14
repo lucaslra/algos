@@ -19,7 +19,12 @@ type QuizRound struct {
 
 func main() {
 	csvData := readProblemFile()
-	defer csvData.Close()
+	defer func(csvData *os.File) {
+		err := csvData.Close()
+		if err != nil {
+			panic(err)
+		}
+	}(csvData)
 
 	problems := parseProblems(csvData)
 
