@@ -3,12 +3,13 @@ package main
 import (
 	"fmt"
 	"log"
+	"os"
 
-	"github.com/lucaslra/algos/links"
+	"github.com/lucaslra/algos/findlinks2/links"
 )
 
 func main() {
-	fmt.Println(crawl("https://golang.org"))
+	breadthFirst(crawl, os.Args[1:])
 }
 
 func crawl(url string) []string {
@@ -19,4 +20,18 @@ func crawl(url string) []string {
 	}
 
 	return list
+}
+
+func breadthFirst(f func(item string) []string, worklist []string) {
+	seen := make(map[string]bool)
+	for len(worklist) > 0 {
+		items := worklist
+		worklist = nil
+		for _, item := range items {
+			if !seen[item] {
+				seen[item] = true
+				worklist = append(worklist, f(item)...)
+			}
+		}
+	}
 }

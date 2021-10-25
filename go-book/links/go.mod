@@ -1,4 +1,4 @@
-module github.com/lucaslra/algos/links
+module azurecoder.dev/algos/links
 
 go 1.17
 
