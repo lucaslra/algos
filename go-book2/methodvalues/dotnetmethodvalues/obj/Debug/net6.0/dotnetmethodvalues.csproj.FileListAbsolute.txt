@@ -1,0 +1,15 @@
+/Users/luribeiro/Code/Go/algos/go-book2/methodvalues/dotnetmethodvalues/bin/Debug/net6.0/dotnetmethodvalues
+/Users/luribeiro/Code/Go/algos/go-book2/methodvalues/dotnetmethodvalues/bin/Debug/net6.0/dotnetmethodvalues.deps.json
+/Users/luribeiro/Code/Go/algos/go-book2/methodvalues/dotnetmethodvalues/bin/Debug/net6.0/dotnetmethodvalues.runtimeconfig.json
+/Users/luribeiro/Code/Go/algos/go-book2/methodvalues/dotnetmethodvalues/bin/Debug/net6.0/dotnetmethodvalues.dll
+/Users/luribeiro/Code/Go/algos/go-book2/methodvalues/dotnetmethodvalues/bin/Debug/net6.0/ref/dotnetmethodvalues.dll
+/Users/luribeiro/Code/Go/algos/go-book2/methodvalues/dotnetmethodvalues/bin/Debug/net6.0/dotnetmethodvalues.pdb
+/Users/luribeiro/Code/Go/algos/go-book2/methodvalues/dotnetmethodvalues/obj/Debug/net6.0/dotnetmethodvalues.csproj.AssemblyReference.cache
+/Users/luribeiro/Code/Go/algos/go-book2/methodvalues/dotnetmethodvalues/obj/Debug/net6.0/dotnetmethodvalues.GeneratedMSBuildEditorConfig.editorconfig
+/Users/luribeiro/Code/Go/algos/go-book2/methodvalues/dotnetmethodvalues/obj/Debug/net6.0/dotnetmethodvalues.AssemblyInfoInputs.cache
+/Users/luribeiro/Code/Go/algos/go-book2/methodvalues/dotnetmethodvalues/obj/Debug/net6.0/dotnetmethodvalues.AssemblyInfo.cs
+/Users/luribeiro/Code/Go/algos/go-book2/methodvalues/dotnetmethodvalues/obj/Debug/net6.0/dotnetmethodvalues.csproj.CoreCompileInputs.cache
+/Users/luribeiro/Code/Go/algos/go-book2/methodvalues/dotnetmethodvalues/obj/Debug/net6.0/dotnetmethodvalues.dll
+/Users/luribeiro/Code/Go/algos/go-book2/methodvalues/dotnetmethodvalues/obj/Debug/net6.0/ref/dotnetmethodvalues.dll
+/Users/luribeiro/Code/Go/algos/go-book2/methodvalues/dotnetmethodvalues/obj/Debug/net6.0/dotnetmethodvalues.pdb
+/Users/luribeiro/Code/Go/algos/go-book2/methodvalues/dotnetmethodvalues/obj/Debug/net6.0/dotnetmethodvalues.genruntimeconfig.cache
